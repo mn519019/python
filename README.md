@@ -1,4 +1,4 @@
-# python
+# Python
 Python Programming Repository
 
 
