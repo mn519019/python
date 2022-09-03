@@ -4,6 +4,12 @@
 ## Future: Make it as a cron job to run this script.
 # The cronjob also writes systemlog every 5 min but this can be modifeid depending on your system requirements.
 
+## Additional Development for future: Delete line after certain days like every 7 days to refresh the log file and send the log into the desired log directory 
+## Logging output: 
+#Create a new log file!
+#PSQL connection is valid at 11:03:46
+#PSQL connection is valid at 11:03:55
+
 import time
 import socket
 from pathlib import Path
