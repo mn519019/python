@@ -21,3 +21,4 @@ k = 0
 s = Solution()
 print ("Count of pairs with given diff is ",
                 s.findPairs(arr,k))
+# https://leetcode.com/problems/k-diff-pairs-in-an-array/submissions/
