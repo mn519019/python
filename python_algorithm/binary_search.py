@@ -14,16 +14,16 @@ def binary_search(list, target):
             left = mid + 1 
         else:
             right = mid -1
-pass
+    return -1
         
-# print(binary_search(sortlist,'Kim'))
+print(binary_search(sortlist,'Kim'))
 
 # Linear Search Approach
-# def linear_search(list,target):
-#     for i, x in enumerate(list):
-#         if x == target:
-#             return str(x) +" has been found on index " + str(i)
-#             break
+def linear_search(list,target):
+    for i, x in enumerate(list):
+        if x == target:
+            return str(x) +" has been found on index " + str(i)
+            break
         
-# print(linear_search(sortlist,"Kim"))
+print(linear_search(sortlist,"Kim"))
 
