@@ -1,4 +1,4 @@
-def missing_number(list):
+def missing_number(self,list):
     sortlist = sorted(list)
     biggest = sortlist[len(sortlist)-1]
     for i in range(0,biggest+1):
