@@ -1,3 +1,5 @@
+# Strategy: Use a stack to pop when the hashmap value is matched with the top of the stack.
+# The key is we need to map parentheses in a reverse order to apply this strategy.
 class Solution:
     def isValid(self,s:str):
         stack = []
