@@ -14,3 +14,8 @@ print(frequent_word())
 ## Output 
 # {'Sheena': 1, 'loves': 2, 'eating': 2, 'apple': 2, 'and': 2, 
 # 'mango.': 1, 'Her': 1, 'sister': 1, 'also': 1, 'mango': 1}
+
+# mylist = ["a", "b", "a", "c", "c"]
+# myfreq = [mylist.count(p) for p in mylist]
+# result = dict(zip(mylist,myfreq))
+# print(result)
