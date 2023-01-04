@@ -1,5 +1,5 @@
 list1 = ['Alice','Kim','Bob','Corner','Minwoo','Domino','Elice','Frank'
-,'Gong','Hay','Jason','Lion','Nan']
+        ,'Gong','Hay','Jason','Lion','Nan']
 
 sortlist = sorted(list1)
 # Binary Search Approach
