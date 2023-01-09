@@ -24,8 +24,3 @@ def find_target_sum(list,target):
 
 list1 = [0,5,7,4,3,9,8,21,19,17]
 print(find_target_sum(list1,17))
-
-# list1 = [5,7,4,3,9,8,21,19]
-
-# for i in list1:
-#     print(i)
