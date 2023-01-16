@@ -7,10 +7,16 @@ def is_anagram(str1, str2):
     if len(l1) == len(l2):
         l1.sort()
         l2.sort()
-    return l1 == l2
-
+        return l1 == l2 
+    else:
+        return False
 
 print("Result: ",is_anagram('cinema', 'iceman'))
+
+## Tine Complexity 
+## Python sort uses Tim Sort which averages out O(nlogn).
+## Therefore average time complexity for this question is O(nlogn)
+
 
 # import unittest
 
