@@ -1,6 +1,9 @@
+# Docker module needs to be installed to use Python SDK
+# This scripts uses pyhon version 2 
+# To do so pip install docker
+
 import sys
 import docker
-# Docker module needs to be installed to use Python SDK
 
 class docker_controller:
     def __init__(self,username,password,docker_img):
@@ -50,6 +53,7 @@ if __name__ == "__main__" :
         controller = docker_controller(str1,str2,str3)
         controller.signin(str1,str2)
         option = raw_input("Type \"push or pull or remove\" to complete the operation: \n ")
+
         if option in push:
             controller.docker_push(str3)
         elif option in pull: 
@@ -59,6 +63,7 @@ if __name__ == "__main__" :
         else:
             print("Required input is not typed.")
             sys.exit(1)
+
         out = raw_input("Type \"q\" to exit the loop, otherwise type \"y\" \n")
         if out == 'q':
             break
