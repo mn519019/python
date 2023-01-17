@@ -19,7 +19,7 @@ class docker_controller:
 
     def docker_pull(self,docker_img):
         print("docker pull")
-        client = docker.from_env()
+        client = docker.from_env() 
         image = client.images.pull(docker_img)
         print("Avialbe Docker Images from your hub: \n")
         for image in client.images.list():
@@ -27,7 +27,13 @@ class docker_controller:
             print(client.images.get(image.id))
 
     def docker_push(self,docker_img):
-        print("docker push")
+        client = docker.from_env()
+        for line in client.images.push(docker_img,tag="latest",stream=True, decode=True):
+            print(line)
+
+    ## Docker Remove Image 
+    ## TBC
+    
 
 if __name__ == "__main__" :
     push = {'push','Push', 'PUSH'}
