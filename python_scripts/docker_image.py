@@ -3,12 +3,12 @@ import docker
 # Docker module needs to be installed to use Python SDK
 
 class docker_controller:
-    def __init__(self,username,password,dock_img):
-        self.username = None
-        self.password = None
-        self.dock_img = None
+    def __init__(self,username,password,docker_img):
+        self.username = username
+        self.password = password
+        self.docker_img = docker_img
 
-    def signin(self, name, pswd):
+    def signin(self,username,password):
         try:
             client = docker.from_env()
             client.login(username=self.username, password=self.password)
@@ -17,7 +17,7 @@ class docker_controller:
             print("Failed to sign-in docker registry")
             sys.exit(1)
 
-    def docker_pull(self, docker_img):
+    def docker_pull(self,docker_img):
         print("docker pull")
         client = docker.from_env()
         image = client.images.pull(docker_img)
@@ -26,17 +26,26 @@ class docker_controller:
             container_id = image.id
             print(client.images.get(image.id))
 
-    def docker_push():
+    def docker_push(self,docker_img):
         print("docker push")
 
 if __name__ == "__main__" :
+    push = {'push','Push', 'PUSH'}
+    pull = {'pull','Pull', 'PULL'}
     while True:
         str1 = raw_input("Please enter your docker ID: \n")
         str2 = raw_input("please enter your docker password: \n")
         str3 = raw_input("please enter name of the docker image: \n")
         controller = docker_controller(str1,str2,str3)
         controller.signin(str1,str2)
-        controller.docker_pull(str3)
+        option = raw_input("Type \"push or pull\" to complete the operation: \n ")
+        if option in push:
+            controller.docker_push(str3)
+        elif option in pull: 
+            controller.docker_pull(str3)
+        else:
+            print("Required input is not typed.")
+            sys.exit(1)
         out = raw_input("Type \"q\" to exit the loop, otherwise type \"y\" \n")
         if out == 'q':
             break
